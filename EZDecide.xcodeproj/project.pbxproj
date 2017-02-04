@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		262E249D1E45625700CA168A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E249C1E45625700CA168A /* AppDelegate.swift */; };
-		262E249F1E45625700CA168A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E249E1E45625700CA168A /* ViewController.swift */; };
 		262E24A21E45625700CA168A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 262E24A01E45625700CA168A /* Main.storyboard */; };
 		262E24A41E45625700CA168A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 262E24A31E45625700CA168A /* Assets.xcassets */; };
 		262E24A71E45625700CA168A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 262E24A51E45625700CA168A /* LaunchScreen.storyboard */; };
+		262E24AF1E457DF200CA168A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 262E24AE1E457DF200CA168A /* GoogleService-Info.plist */; };
+		262E24B11E4583B600CA168A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E24B01E4583B600CA168A /* LoginViewController.swift */; };
+		262E24B71E458B0300CA168A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E24B61E458B0300CA168A /* MainViewController.swift */; };
+		A2A9AF3AC4BA2A8F4AB1102F /* Pods_EZDecide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3B276CBA3D9D87F8867DFE /* Pods_EZDecide.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		262E24991E45625700CA168A /* EZDecide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZDecide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		262E249C1E45625700CA168A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		262E249E1E45625700CA168A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		262E24A11E45625700CA168A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		262E24A31E45625700CA168A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		262E24A61E45625700CA168A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		262E24A81E45625700CA168A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		262E24AE1E457DF200CA168A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		262E24B01E4583B600CA168A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		262E24B61E458B0300CA168A /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AB73310AE838A47C61672442 /* Pods-EZDecide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZDecide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EZDecide/Pods-EZDecide.debug.xcconfig"; sourceTree = "<group>"; };
+		C5155AE3857CCE48E1037830 /* Pods-EZDecide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZDecide.release.xcconfig"; path = "Pods/Target Support Files/Pods-EZDecide/Pods-EZDecide.release.xcconfig"; sourceTree = "<group>"; };
+		CE3B276CBA3D9D87F8867DFE /* Pods_EZDecide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZDecide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2A9AF3AC4BA2A8F4AB1102F /* Pods_EZDecide.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14EF073BFE111A9EC78164BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AB73310AE838A47C61672442 /* Pods-EZDecide.debug.xcconfig */,
+				C5155AE3857CCE48E1037830 /* Pods-EZDecide.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		262E24901E45625700CA168A = {
 			isa = PBXGroup;
 			children = (
 				262E249B1E45625700CA168A /* EZDecide */,
 				262E249A1E45625700CA168A /* Products */,
+				14EF073BFE111A9EC78164BD /* Pods */,
+				9BD4E963262C2A9BA65196A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +75,23 @@
 			isa = PBXGroup;
 			children = (
 				262E249C1E45625700CA168A /* AppDelegate.swift */,
-				262E249E1E45625700CA168A /* ViewController.swift */,
+				262E24B61E458B0300CA168A /* MainViewController.swift */,
 				262E24A01E45625700CA168A /* Main.storyboard */,
 				262E24A31E45625700CA168A /* Assets.xcassets */,
 				262E24A51E45625700CA168A /* LaunchScreen.storyboard */,
 				262E24A81E45625700CA168A /* Info.plist */,
+				262E24AE1E457DF200CA168A /* GoogleService-Info.plist */,
+				262E24B01E4583B600CA168A /* LoginViewController.swift */,
 			);
 			path = EZDecide;
+			sourceTree = "<group>";
+		};
+		9BD4E963262C2A9BA65196A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE3B276CBA3D9D87F8867DFE /* Pods_EZDecide.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 262E24AB1E45625700CA168A /* Build configuration list for PBXNativeTarget "EZDecide" */;
 			buildPhases = (
+				D10CE23458C94B2988DF43C4 /* [CP] Check Pods Manifest.lock */,
 				262E24951E45625700CA168A /* Sources */,
 				262E24961E45625700CA168A /* Frameworks */,
 				262E24971E45625700CA168A /* Resources */,
+				1B8BBEC2C84618F61AAFC6CD /* [CP] Embed Pods Frameworks */,
+				D3CCF1D200FAE1E4049E2723 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				262E24A71E45625700CA168A /* LaunchScreen.storyboard in Resources */,
+				262E24AF1E457DF200CA168A /* GoogleService-Info.plist in Resources */,
 				262E24A41E45625700CA168A /* Assets.xcassets in Resources */,
 				262E24A21E45625700CA168A /* Main.storyboard in Resources */,
 			);
@@ -132,12 +166,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B8BBEC2C84618F61AAFC6CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EZDecide/Pods-EZDecide-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D10CE23458C94B2988DF43C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D3CCF1D200FAE1E4049E2723 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EZDecide/Pods-EZDecide-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		262E24951E45625700CA168A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				262E249F1E45625700CA168A /* ViewController.swift in Sources */,
+				262E24B71E458B0300CA168A /* MainViewController.swift in Sources */,
+				262E24B11E4583B600CA168A /* LoginViewController.swift in Sources */,
 				262E249D1E45625700CA168A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +340,7 @@
 		};
 		262E24AC1E45625700CA168A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB73310AE838A47C61672442 /* Pods-EZDecide.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UKTL25U66K;
@@ -270,6 +354,7 @@
 		};
 		262E24AD1E45625700CA168A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5155AE3857CCE48E1037830 /* Pods-EZDecide.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UKTL25U66K;
@@ -300,6 +385,7 @@
 				262E24AD1E45625700CA168A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
