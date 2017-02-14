@@ -23,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate , GIDSignInDelegate {
         GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         
-        GIDSignIn.sharedInstance().delegate = self
         return true
     }
 
@@ -58,7 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate , GIDSignInDelegate {
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
         // ...
-        if let error = error {
+        if error != nil {
             // ...
             return
         }
@@ -67,12 +66,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate , GIDSignInDelegate {
         let credential = FIRGoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                           accessToken: authentication.accessToken)
         // ...
+        FIRAuth.auth()?.signIn(with: credential) { (user, error) in
+            // ...
+            if error != nil {
+                // ...
+                return
+            }
+            else{
+            print("user signed in")
+                self.window?.rootViewController?.performSegue(withIdentifier: "loginToMain", sender: nil)
+                
+            }
+    }
     }
     
-    func signIn(signIn: GIDSignIn!, didDisconnectWithUser user:GIDGoogleUser!,
-                withError error: NSError!) {
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user:GIDGoogleUser!,
+                withError error: Error!) {
         // Perform any operations when the user disconnects from app here.
         // ...
+        let firebaseAuth = FIRAuth.auth()
+        do {
+            try firebaseAuth?.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
     }
 }
 

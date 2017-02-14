@@ -13,15 +13,19 @@ import GoogleSignIn
 class LoginViewController: UIViewController , GIDSignInUIDelegate{
     
 
-    @IBOutlet var GoogleSignInButton: GIDSignInButton!
-
-
+    @IBAction func onGoogleLogin(_ sender: Any) {
+        GIDSignIn.sharedInstance().signIn()
+        self.performSegue(withIdentifier: "loginToMain", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         GIDSignIn.sharedInstance().uiDelegate = self
-        GIDSignIn.sharedInstance().signIn()
+        
 
         // Do any additional setup after loading the view.
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        GIDSignIn.sharedInstance().uiDelegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,26 +43,11 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate{
         // Pass the selected object to the new view controller.
     }
     */
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
-        // ...
-        if let error = error {
-            // ...
-            print(error)
-            return
+    func sign(_ signIn: GIDSignIn!, dismiss viewController: UIViewController!) {
+            do {
+            try FIRAuth.auth()?.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
         }
-        
-        guard let authentication = user.authentication else { return }
-        let credential = FIRGoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                                                          accessToken: authentication.accessToken)
-        FIRAuth.auth()?.signIn(with: credential) { (user, error) in
-            // ...
-            if let error = error {
-                // ...
-                return
-            }
-        // ...
-            self.performSegue(withIdentifier: "loginToMain", sender: nil)
     }
-
-}
 }

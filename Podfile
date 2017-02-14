@@ -9,5 +9,6 @@ target 'EZDecide' do
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'GoogleSignIn'
+pod ‘FirebaseDatabase’
 
 end

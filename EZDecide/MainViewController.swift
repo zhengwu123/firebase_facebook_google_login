@@ -8,22 +8,27 @@
 
 import UIKit
 import Firebase
-class MainViewController: UIViewController {
+import GoogleSignIn
+class MainViewController: UIViewController{
             let firebaseAuth = FIRAuth.auth()
 
-    @IBAction func onSignOut(_ sender: Any) {
-
+    @IBAction func OnSignOut(_ sender: Any) {
         do {
             try firebaseAuth?.signOut()
+            print("user signed out")
+        self.performSegue(withIdentifier: "BackToLogIn", sender: self)
+            
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
