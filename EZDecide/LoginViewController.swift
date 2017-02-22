@@ -9,10 +9,12 @@
 import UIKit
 import Firebase
 import GoogleSignIn
-
-class LoginViewController: UIViewController , GIDSignInUIDelegate{
+import FBSDKLoginKit
+class LoginViewController: UIViewController , GIDSignInUIDelegate,FBSDKLoginButtonDelegate{
     
+    @IBOutlet var faceBookLogin: FBSDKLoginButton!
 
+    @IBOutlet var loginButton: UIButton!
     @IBAction func onGoogleLogin(_ sender: Any) {
         GIDSignIn.sharedInstance().signIn()
         self.performSegue(withIdentifier: "loginToMain", sender: self)
@@ -20,6 +22,14 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         GIDSignIn.sharedInstance().uiDelegate = self
+        faceBookLogin.readPermissions = ["public_profile", "email", "user_friends"]
+        faceBookLogin.delegate = self
+        loginButton.layer.cornerRadius = 5
+        if (FBSDKAccessToken.current() != nil) {
+            // User is logged in, do work such as go to next view controller.
+        }
+        
+        
         
 
         // Do any additional setup after loading the view.
@@ -33,6 +43,13 @@ class LoginViewController: UIViewController , GIDSignInUIDelegate{
         // Dispose of any resources that can be recreated.
     }
     
+    func loginButton(_ faceBookLogin: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        print("user loggin")
+        self.performSegue(withIdentifier: "loginToMain", sender: self)
+    }
+    func loginButtonDidLogOut(_ faceBookLogin: FBSDKLoginButton!) {
+        print("user logged out")
+    }
 
     /*
     // MARK: - Navigation

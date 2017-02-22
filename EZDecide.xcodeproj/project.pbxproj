@@ -14,6 +14,9 @@
 		262E24AF1E457DF200CA168A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 262E24AE1E457DF200CA168A /* GoogleService-Info.plist */; };
 		262E24B11E4583B600CA168A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E24B01E4583B600CA168A /* LoginViewController.swift */; };
 		262E24B71E458B0300CA168A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E24B61E458B0300CA168A /* MainViewController.swift */; };
+		26313A6F1E52C39700B26F9E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26313A6E1E52C39700B26F9E /* FBSDKLoginKit.framework */; };
+		26313A711E52C53100B26F9E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26313A701E52C53100B26F9E /* FBSDKCoreKit.framework */; };
+		26313A731E52CCCA00B26F9E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26313A721E52CCCA00B26F9E /* Bolts.framework */; };
 		A2A9AF3AC4BA2A8F4AB1102F /* Pods_EZDecide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3B276CBA3D9D87F8867DFE /* Pods_EZDecide.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,9 @@
 		262E24B61E458B0300CA168A /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		262E24B81E459EA900CA168A /* EZDecide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EZDecide.entitlements; sourceTree = "<group>"; };
 		262E24B91E459F2200CA168A /* EZDecide-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EZDecide-Bridging-Header.h"; sourceTree = "<group>"; };
+		26313A6E1E52C39700B26F9E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		26313A701E52C53100B26F9E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		26313A721E52CCCA00B26F9E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		AB73310AE838A47C61672442 /* Pods-EZDecide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZDecide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EZDecide/Pods-EZDecide.debug.xcconfig"; sourceTree = "<group>"; };
 		C5155AE3857CCE48E1037830 /* Pods-EZDecide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZDecide.release.xcconfig"; path = "Pods/Target Support Files/Pods-EZDecide/Pods-EZDecide.release.xcconfig"; sourceTree = "<group>"; };
 		CE3B276CBA3D9D87F8867DFE /* Pods_EZDecide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZDecide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,7 +45,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26313A6F1E52C39700B26F9E /* FBSDKLoginKit.framework in Frameworks */,
+				26313A711E52C53100B26F9E /* FBSDKCoreKit.framework in Frameworks */,
 				A2A9AF3AC4BA2A8F4AB1102F /* Pods_EZDecide.framework in Frameworks */,
+				26313A731E52CCCA00B26F9E /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,22 +86,33 @@
 		262E249B1E45625700CA168A /* EZDecide */ = {
 			isa = PBXGroup;
 			children = (
+				269556881E5D253400F67D5F /* controllers */,
 				262E24B81E459EA900CA168A /* EZDecide.entitlements */,
 				262E249C1E45625700CA168A /* AppDelegate.swift */,
-				262E24B61E458B0300CA168A /* MainViewController.swift */,
 				262E24A01E45625700CA168A /* Main.storyboard */,
 				262E24A31E45625700CA168A /* Assets.xcassets */,
 				262E24A51E45625700CA168A /* LaunchScreen.storyboard */,
 				262E24A81E45625700CA168A /* Info.plist */,
 				262E24AE1E457DF200CA168A /* GoogleService-Info.plist */,
-				262E24B01E4583B600CA168A /* LoginViewController.swift */,
 			);
 			path = EZDecide;
+			sourceTree = "<group>";
+		};
+		269556881E5D253400F67D5F /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				262E24B61E458B0300CA168A /* MainViewController.swift */,
+				262E24B01E4583B600CA168A /* LoginViewController.swift */,
+			);
+			name = controllers;
 			sourceTree = "<group>";
 		};
 		9BD4E963262C2A9BA65196A4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				26313A721E52CCCA00B26F9E /* Bolts.framework */,
+				26313A701E52C53100B26F9E /* FBSDKCoreKit.framework */,
+				26313A6E1E52C39700B26F9E /* FBSDKLoginKit.framework */,
 				CE3B276CBA3D9D87F8867DFE /* Pods_EZDecide.framework */,
 			);
 			name = Frameworks;
@@ -356,8 +376,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = EZDecide/EZDecide.entitlements;
 				DEVELOPMENT_TEAM = UKTL25U66K;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = EZDecide/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/Frameworks/FacebookSDK";
 				PRODUCT_BUNDLE_IDENTIFIER = us.faceapp.EZDecide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "EZDecide-Bridging-Header.h";
@@ -374,8 +398,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = EZDecide/EZDecide.entitlements;
 				DEVELOPMENT_TEAM = UKTL25U66K;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = EZDecide/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/Frameworks/FacebookSDK";
 				PRODUCT_BUNDLE_IDENTIFIER = us.faceapp.EZDecide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "EZDecide-Bridging-Header.h";
